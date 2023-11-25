@@ -4,10 +4,478 @@
 @import "./utils/App";
 @import "./components/Components";
 
+@mixin dski {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.6px; /* 135% */
+}
+
+@mixin text {
+    color: #56593D;
+    text-align: center;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32.4px; /* 162% */
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto";
+    font-family: sans-serif;
     list-style: none;
-    
+    text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+}
+
+body {
+    max-width: 1440px;
+    display: block;
+    flex-wrap: wrap;
+}
+
+.navigation {
+    display: flex;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 43.8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+}
+
+.logo {
+    max-width: 100%;
+    list-style: none;
+    display: flex;
+    color: #fff;
+    margin-top: 2vh;
+}
+
+.leg {
+    padding-left: 2vw;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: inline-flex;
+    color: #fff;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 109.5%; /* 17.52px */
+    margin-top: -1vw;
+}
+
+.leg:hover {
+    transform: scale(1.05);
+}
+
+.header {
+    position: relative;
+}
+
+.popop {
+    display: flex;
+    flex-direction: inline-flex;
+    align-content: flex-end;
+    margin-left: 92vw;
+    margin-top: -3vw;
+}
+
+.popop:hover {
+    transform: scale(1.05);
+}
+
+.kinn {
+    margin-left: 47.5vw;
+}
+
+.main {
+    width: 1328px;
+    height: 700px;
+    flex-shrink: 0;
+    background: url(../assets/images/main.png), lightgray 50% / cover no-repeat;
+    margin-left: 13vw;
+    margin-top: 2vw;
+}
+
+.allcollections {
+    color: #56593D;
+    text-align: right;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.6px; /* 120% */
+    letter-spacing: 1.8px;
+    width: 179px;
+    margin-left: 70vw;
+    margin-top: -12vw;
+}
+
+.elevateyoureveryday {
+    color: #56593D;
+    text-align: right;
+    font-family: Roboto;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60.48px; /* 134.4% */
+    width: 439px;
+    margin-left: 56.2vw;
+}
+
+.shopnow {
+    color: #FFFFEF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.365px; /* 139.781% */
+    letter-spacing: 1.575px;
+    text-transform: uppercase;
+    background-color: #56593D;
+    width: 154px;
+    height: 56px;
+    flex-shrink: 0;
+    margin-left: 72.8vw;
+    margin-top: 1vw;
+    text-align: center;
+}
+
+.shopnow:hover {
+    transform: scale(1.2);
+}
+
+h2 {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 57px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 81px; /* 142.105% */
+    margin-left: 20vw;
+    margin-top: 15vh;
+    text-align: center;
+}
+
+.shopall {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.6px; /* 160% */
+    letter-spacing: 1.6px;
+    text-decoration: underline;
+}
+
+.readstories {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.6px; /* 160% */
+    letter-spacing: 1.6px;
+    text-decoration: underline;
+    margin-left: 40vw;
+    margin-top: -1.5vw;
+}
+
+.mbc {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32.4px; /* 135% */
+    margin-left: 23.5vw;
+    margin-top: 10vw;
+}
+
+.doski {
+    display: flex;
+    margin-left: 12.5vw;
+    margin-top: 5vw;
+    padding: 5px;
+}
+
+.kart1 {
+    padding: 30px;
+}
+
+.kart1:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.kart2 {
+    padding: 30px;
+}
+
+.kart2:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.kart3 {
+    padding: 30px;
+}
+
+.kart3:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.board {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.6px; /* 135% */
+}
+
+.price {
+    color: #717353;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.92px; /* 162% */
+    letter-spacing: 1.62px;
+}
+
+.tarelki {
+    width: 1328px;
+    height: 700px;
+    flex-shrink: 0;
+    margin-left: 13.5vw;
+    margin-top: 10vw;
+}
+
+.te {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.6px; /* 127.059% */
+    letter-spacing: 1.8px;
+    margin-left: 20vw;
+    margin-top: -32.5vw;
+}
+
+.wb {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60.48px; /* 120.96% */
+    margin-left: 20vw;
+}
+
+.pr1 {
+    width: 743px;
+    height: 618px;
+    margin-top: 30vw;
+    margin-left:2.5vw;
+}
+
+.ods {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.88px; /* 134.069% */
+    margin-left: 65vw;
+    margin-top: -32.5vw;
+}
+
+.a1 {
+    color: #fff;
+    text-decoration: line-through black;
+    margin-left: 70vw;
+}
+
+.wb1 {
+    color: #56593D;
+    text-align: center;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32.4px; /* 162% */
+    margin-left: 65vw;
+}
+
+.ytyt {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.88px; /* 134.069% */
+    margin-top: 15vw;
+    margin-right: 35vw;
+}
+
+.a2 {
+    color: #fff;
+    text-decoration: line-through black;
+    margin-left: 20vw;
+}
+
+.oml {
+    color: #56593D;
+    text-align: center;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32.4px; /* 162% */
+    margin-right: 50vw;
+    margin-left: 15vw;
+}
+
+.pr2 {
+    width: 743px;
+    height: 885px;
+    margin-left: 57.5vw;
+    margin-top: -30vw;
+}
+
+.sut {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.88px; /* 138.857% */
+    margin-top: 10vw;
+    margin-left: 20vw;
+} 
+
+.receive {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px; /* 169.412% */
+    margin-left: 20vw;
+    margin-top: 1vw;
+}
+
+.a3 {
+    color: #fff;
+    text-decoration: underline black;
+    margin-left: 35vw;
+    margin-top: 2vw;
+}
+
+.sub {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.72px; /* 151.467% */
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    padding: 1px;
+    margin-left: 30vw;
+    margin-top: -1.25vw;
+}
+
+.sub:hover {
+    transform: scale(1.5);
+}
+
+.km {
+    color: #56593D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32.4px; /* 129.6% */
+    margin-left: 20vw;
+    margin-top: 10vw;
+}
+
+.kmkart {
+    display: flex;
+    margin-left: 12.5vw;
+    margin-top: 3vw;
+}
+
+.kmka1 {
+    padding: 10px;
+}
+
+.kmka2 {
+    padding: 10px;
+}
+
+.kmka3 {
+    padding: 10px;
+}
+
+.kmka4 {
+    padding: 10px;
+}
+
+.kmka1:hover {
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+.kmka2:hover {
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+.kmka3:hover {
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+.kmka4:hover {
+    transform: scale(1.15);
+    transition: 0.5s;
 }
